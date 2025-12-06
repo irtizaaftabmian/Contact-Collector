@@ -16,6 +16,7 @@ function App() {
     }, []);
 
     const fetchContacts = async () => {
+        if (!supabase) return;
         setLoading(true);
         const { data, error } = await supabase
             .from('contacts')
@@ -32,6 +33,7 @@ function App() {
     };
 
     const handleSaveContact = async (contactData: Partial<Contact>) => {
+        if (!supabase) return;
         setSyncStatus('saving');
 
         // Optimistic update
@@ -79,6 +81,7 @@ function App() {
     };
 
     const handleDeleteContact = async (id: string) => {
+        if (!supabase) return;
         setSyncStatus('saving');
         setContacts((prev) => prev.filter((c) => c.id !== id));
 
@@ -108,6 +111,26 @@ function App() {
             due_date: newDue.toISOString().split('T')[0]
         });
     };
+
+    if (!supabase) {
+        return (
+            <div className="app-container">
+                <header className="app-header">
+                    <h1 className="app-title">Conference Contact Brain</h1>
+                </header>
+                <div className="panel">
+                    <h2 className="panel-title text-center">Setup Required</h2>
+                    <p className="text-center text-gray-400 mb-4">
+                        Please configure your environment variables to connect to Supabase.
+                    </p>
+                    <div className="bg-[#111] p-4 rounded-lg border border-[#333] text-sm font-mono text-gray-300">
+                        VITE_SUPABASE_URL=...<br />
+                        VITE_SUPABASE_ANON_KEY=...
+                    </div>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="app-container">
