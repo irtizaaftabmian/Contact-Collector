@@ -1,0 +1,194 @@
+/* Root variables are now in index.css */
+
+body {
+  /* Body styles are in index.css */
+}
+
+.app-container {
+  max-width: 600px;
+  /* Mobile-first focus */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header - Large & Bold */
+.app-header {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #222;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  /* Massive title */
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: white;
+}
+
+.app-subtitle {
+  color: var(--text-muted);
+  margin: 12px 0 0;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+/* Panel & Cards - Seamless & Spacious */
+.panel {
+  background: transparent;
+  /* Seamless look */
+  padding: 0;
+  margin-bottom: 60px;
+}
+
+.panel-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+/* Form Styles - Spacious */
+.form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  /* More breathing room */
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.input-field,
+.textarea-field {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.textarea-field {
+  min-height: 160px;
+  resize: none;
+}
+
+.label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* AI Suggestions - Card Style */
+.ai-suggestions {
+  background-color: #111;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.suggestion-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.suggestion-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 0.05em;
+}
+
+.suggestion-text {
+  font-size: 1.1rem;
+  /* Larger text */
+  margin: 0;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+/* Contact List */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section-header {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  border-bottom: 1px solid #222;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.contact-card {
+  background: #111;
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid #222;
+  transition: transform 0.2s;
+}
+
+.contact-card:active {
+  transform: scale(0.98);
+}
+
+.contact-name {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.contact-details {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #222;
+  justify-content: flex-end;
+}
+
+/* Wizard Steps */
+.wizard-steps {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.wizard-step {
+  color: #444;
+}
+
+.wizard-step.active {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.wizard-step.completed {
+  color: var(--primary);
+}

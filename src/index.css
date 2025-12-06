@@ -1,0 +1,140 @@
+/* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+:root {
+    --primary: #0f62fe;
+    /* IBM Blue */
+    --primary-hover: #0353e9;
+    --bg-color: #000000;
+    /* Deep Black */
+    --card-bg: #000000;
+    /* Seamless cards */
+    --input-bg: #111111;
+    --text-main: #ffffff;
+    --text-muted: #888888;
+    --border-color: #333333;
+    --danger: #ff3b30;
+    --success: #34c759;
+
+    font-family: 'Geist', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: dark;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: start;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+}
+
+#root {
+    width: 100%;
+}
+
+button {
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+/* Premium Input Styles - Reference Match */
+input,
+textarea {
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    border-radius: 12px;
+    /* Softer corners */
+    padding: 16px 20px;
+    /* Larger touch targets */
+    font-size: 1rem;
+    transition: border-color 0.2s, transform 0.1s;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--text-main);
+    /* High contrast focus */
+    background-color: #1a1a1a;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #444;
+}
+
+/* Premium Button Styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 24px;
+    /* Larger buttons */
+    border-radius: 30px;
+    /* Pill shape */
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.02);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+.btn-secondary {
+    background-color: #222;
+    color: white;
+    border: 1px solid #333;
+}
+
+.btn-secondary:hover {
+    background-color: #333;
+    border-color: #555;
+}
+
+.btn-text {
+    background: transparent;
+    color: var(--text-muted);
+    padding: 10px 16px;
+}
+
+.btn-text:hover {
+    color: var(--text-main);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 3px;
+}
